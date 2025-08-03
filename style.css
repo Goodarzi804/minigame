@@ -1,0 +1,208 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    background-color: azure;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Vazir;
+}
+.boxspins{
+    width: 450px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 4px solid black;
+    border-radius: 10px 10px 0 0;
+    box-shadow: inset 0 0 100px gray;
+    background-color: #fff;
+}
+.box1 , .box2 , .box3{
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    box-shadow: inset 0 0 10px black;
+    border-radius: 5px;
+    color: gold;
+}
+.button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: lightgray;
+    border: 4px solid black;
+    box-shadow: inset 0 0 10px gray;
+    bottom: -50px;
+    cursor: pointer;
+}
+.button:hover{
+    animation:  a 1s infinite alternate;
+}
+.button:active{
+    animation: pulse 0.2s;
+
+}
+.boxpool{
+    width: 450px;
+    height: 250px;
+    box-shadow: inset 0 0 100px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    
+}
+.boxpool p{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 60px;
+
+}
+.boxpool input{
+    all: unset;
+    width: 100px;
+    height: 40px;
+    box-shadow: inset 0 0 15px gray;
+    border-radius: 5px;
+    padding: 0px 10px;
+    font-size: 18px;
+    text-align: center;
+}
+.boxpool button{
+    all: unset;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 15px gray;
+    text-align: center;
+    cursor: pointer;
+}
+.boxpool button:hover{
+    box-shadow: inset 0 0 25px gray;
+    font-size: 14px;
+}
+@keyframes a{
+    0%{
+        box-shadow: inset 0 0 50px red;  
+    }
+    25%{
+        box-shadow: inset 0 0 50px orangered;  
+    }
+    50%{
+        box-shadow: inset 0 0 50px yellow;
+    }
+    75%{
+        box-shadow: inset 0 0 50px green;
+    }
+    100%{
+        box-shadow: inset 0 0 50px blue;
+    }
+}
+#joda{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 80px;
+}
+#boxs{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+.back{
+    background-color: red ;
+    position: absolute;
+    width: 480px;
+    height: 533px;
+    z-index: -10;
+    border-radius: 20px;
+    overflow: hidden;
+    animation: anime2 2s infinite linear alternate;
+    display: none;
+    transition: all 2s linear;
+}
+.color{
+    background:linear-gradient(0deg,tomato, lime , gold , red , blue , purple);
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: -200px ;
+    left: -200px;
+    animation: anime 1s infinite  linear;
+    transition: all 2s linear;
+}
+#showmatn{
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    top: -130px;
+    font-size: 52px;
+}
+@keyframes anime{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+        
+    }
+    
+}
+@keyframes anime2{
+    0%{
+        box-shadow: 0 0 30px 10px lime;
+    }
+    25%{
+        box-shadow: 0 0 30px 10px gold;
+        
+    }
+    50%{
+        box-shadow: 0 0 30px 10px red;
+        
+    }
+    75%{
+        box-shadow: 0 0 30px 10px blue;
+
+    }
+    100%{
+        box-shadow: 0 0 30px 10px purple;
+
+    }
+
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
